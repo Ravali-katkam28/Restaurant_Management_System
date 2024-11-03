@@ -1,9 +1,14 @@
-/* Mandatory Stuff */
+/* General Reset for Consistency */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Belgrano", serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
 }
 
 /* Hero Section Part */
@@ -53,7 +58,6 @@
   font-size: 30px;
   font-weight: 380; /* Indicates the size of the font whether [thin,medium,...etc] */
 }
-
 @media only screen and (max-width: 1000px) {
   /* Navigation bar */
   .link {
@@ -76,20 +80,106 @@
   }
 }
 
+/* About Us Section */
+/* About Us Section */
+.about-section {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Center content horizontally */
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  gap: 20px;
+}
+.image-left,
+.image-right {
+  flex: 1;
+}
+.image-left img,
+.image-right img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Crop the image to fit the box */
+  border-radius: 10px;
+}
+.about-content {
+  flex: 2;
+  padding: 20px;
+  text-align: center;
+}
+.about-content h2 {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.about-content .subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.about-content .description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.about-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-image: url(Images/Button_Design.jpg);
+  color: white;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.about-button:hover {
+  background-color: #555;
+}
+/* Responsive Design for About Us Section */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-left,
+  .image-right {
+    display: none; /* Hide side images on smaller screens */
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  .about-content .subtitle,
+  .about-content .description {
+    font-size: 14px;
+  }
+}
+
 /* Gallery Section */
 /* Container for both text and gallery */
 .content-section {
   display: flex;
   gap: 20px;
   padding: 20px;
+  background-color: #e9efec;
 }
-
 /* Equal width for both text and gallery */
 .gallery-text,
 .gallery-section {
   flex: 1 1 50%;
 }
-
 .gallery-text .belgrano-regular {
   font-family: "Belgrano", serif;
   font-weight: 400;
@@ -101,7 +191,6 @@
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
 }
-
 /* Styling for gallery cards */
 .gallery-card {
   overflow: hidden;
@@ -110,50 +199,44 @@
   aspect-ratio: 4 / 3;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .gallery-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-
 .gallery-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-
 .gallery-card:hover img {
   transform: scale(1.1);
 }
 
 /* Menu Section */
-/* Container for both text and menu */
+/* Container for both text and gallery */
 .menu-section {
   display: flex;
   gap: 20px;
   padding: 20px;
+  background-color: #e9efec;
 }
-
 /* Equal width for both text and gallery */
-.menu-text,
-.menu-section {
+.menu-card-text,
+.menu-gallery {
   flex: 1 1 50%;
 }
-
-.menu-text .belgrano-regular {
+/* Font styling for the text section */
+.menu-card-text {
   font-family: "Belgrano", serif;
-  font-weight: 400;
-  font-style: normal;
 }
-/* Styling for the gallery section */
-.menu-section {
+/* Styling for the gallery grid */
+.menu-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
 }
-
-/* Styling for gallery cards */
+/* Styling for each gallery card */
 .menu-card {
   overflow: hidden;
   border-radius: 10px;
@@ -161,19 +244,283 @@
   aspect-ratio: 4 / 3;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .menu-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-
 .menu-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-
 .menu-card:hover img {
   transform: scale(1.1);
+}
+
+/* This is ordering part */
+/* Order Section (Hero Section) */
+.order-section {
+  position: relative;
+  background-image: url(Images/Dish5.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-section .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.order-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.order-section h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.order-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.order-section .button {
+  padding: 10px 20px;
+  background-color: #000000;
+  font-weight: 400;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Info and Gallery Section */
+.info-order-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 10%;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.info {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.info h2 {
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.info button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.order-row {
+  display: flex;
+  gap: 20px;
+}
+
+.order-row img {
+  width: 100%;
+  max-width: 250px; /* Set a fixed width to keep images the same size */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+/* Center-align the second row */
+.second-row {
+  justify-content: center;
+}
+
+/* This is about Footer part */
+.footer {
+  width: 100%;
+  background-color: #e9efec;
+}
+.footer_section1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
+}
+.footer_section1 img {
+  width: 150px;
+}
+.section1_buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+.section1_buttonContainer button {
+  padding: 5px;
+  width: 110px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.navigation_container {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* repeat( how many tyms we wanna repeat , how many fragments ) */
+  width: 80%;
+  margin: auto;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+.link_container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.link_container h5 {
+  font-size: 18px;
+  font-weight: 450;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+.link_container .footer_link {
+  color: gray;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 300;
+}
+.footer_link:hover {
+  color: black;
+}
+.link_container .section_links_container {
+  display: flex;
+  gap: 8px;
+}
+.link_container .section_links_container button {
+  background-color: black;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.link_container .section_links_container button i {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center; /* it is for x-axis */
+  justify-content: center; /* it is for y-axis */
+}
+.link_container .footer_section_logo {
+  width: 100%;
+  cursor: pointer;
+}
+/* This is one way of writing */
+/* .footer hr{
+    width: 80%;
+    margin-left: 150px;
+    margin-bottom: 20px;
+} 
+.footer .disclamer{
+    width: 80%;
+    color: gray;
+    font-size: 14px;
+    margin-left: 150px;
+    font-weight: 260;
+    padding-bottom: 10px;
+} */
+/* This is another way  */
+.footer .disclamer {
+  width: 80%;
+  color: gray;
+  margin: auto;
+  border-top: 1px solid gray;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 900px) {
+  .navigation_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .navigation_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .navigation_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Buttons */
+.button {
+  background-image: url(Images/Button_Design.jpg);
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 2px solid grey;
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
