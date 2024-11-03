@@ -81,7 +81,6 @@ body {
 }
 
 /* About Us Section */
-/* About Us Section */
 .about-section {
   display: flex;
   align-items: center; /* Align items vertically in the center */
@@ -272,7 +271,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .order-section .overlay {
   background: rgba(0, 0, 0, 0.6);
   padding: 40px;
@@ -280,26 +278,22 @@ body {
   max-width: 600px;
   text-align: center;
 }
-
 .order-section h1 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
-
 .order-section h2 {
   font-size: 2rem;
   color: #ffffff;
   font-weight: 400;
   margin-bottom: 20px;
 }
-
 .order-section p {
   font-size: 1rem;
   margin-bottom: 20px;
   max-width: 500px;
   margin: 0 auto;
 }
-
 .order-section .button {
   padding: 10px 20px;
   background-color: #000000;
@@ -319,25 +313,21 @@ body {
   text-align: center;
   background-color: #ffffff;
 }
-
 .info {
   flex: 1;
   margin-right: 20px;
 }
-
 .info h2 {
   font-size: 2.5rem;
   color: rgba(0, 0, 0, 0.9);
   margin-bottom: 20px;
 }
-
 .info p {
   font-size: 1rem;
   color: #333;
   max-width: 600px;
   margin: 0 auto 20px auto;
 }
-
 .info button {
   padding: 10px 20px;
   background-color: #333;
@@ -347,7 +337,6 @@ body {
   cursor: pointer;
   font-size: 1rem;
 }
-
 .order {
   display: flex;
   flex-direction: column;
@@ -355,12 +344,10 @@ body {
   gap: 20px;
   padding: 20px;
 }
-
 .order-row {
   display: flex;
   gap: 20px;
 }
-
 .order-row img {
   width: 100%;
   max-width: 250px; /* Set a fixed width to keep images the same size */
@@ -368,7 +355,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   object-fit: cover;
 }
-
 /* Center-align the second row */
 .second-row {
   justify-content: center;
