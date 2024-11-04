@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Screen</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="Signupbody">
+    <div class="Signup-container">
+      <div class="Signup-form">
+        <h1>Welcome To Cusine Core</h1>
+        <p>What are you waiting for register to make your taste buds satisfy</p>
+        <form action="SignupScreen.php" method="POST">
+          <label for="username"> User Name : </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="john david"
+            required
+          />
+          <label for="email">Email Address : </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="johndoe123@xyz.com"
+            required
+          />
+
+          <label for="password">Password :</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="********"
+            required
+          />
+          <div class="remember-forgot">
+            <label><input type="checkbox" name="remember" /> Remember me</label>
+          </div>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <div class="Signup-image">
+        <!-- Background image will be added with CSS -->
+      </div>
+    </div>
+  </body>
+</html>

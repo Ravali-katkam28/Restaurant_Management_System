@@ -11,6 +11,161 @@ body {
   background-color: #f7f7f7;
 }
 
+/* Login screen */
+
+.Loginbody {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(Images/Dish5.jpg);
+}
+.login-container {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.login-form {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+}
+.login-form h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.login-form p {
+  color: #777;
+  margin-bottom: 20px;
+}
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.signup-link {
+  margin-top: 10px;
+  color: #777;
+  font-size: 14px;
+}
+.signup-link a {
+  color: #4caf50;
+  text-decoration: none;
+}
+.login-image {
+  flex: 1;
+  background-image: url("Images/Restaurant_Image.jfif");
+  background-size: cover;
+  background-position: center;
+}
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Signup Screen */
+.Signupbody {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(Images/Dish5.jpg);
+}
+.Signup-container {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.Signup-form {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+}
+.Signup-form h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.Signup-form p {
+  color: #777;
+  margin-bottom: 20px;
+}
+.Signup-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+.Signup-form input[type="text"],
+.Signup-form input[type="email"],
+.Signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.Signup-image {
+  flex: 1;
+  background-image: url("Images/Restaurant_Image.jfif");
+  background-size: cover;
+  background-position: center;
+}
+.Signup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
 /* Hero Section Part */
 .Hero__section {
   background: url(Images/Dish5.jpg);
